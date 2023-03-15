@@ -1,0 +1,17 @@
+{
+  "type": "application",
+  "name": "Welcome",
+  "icon": "icon.png",
+  "category": "utilities",
+  "server": null,
+  "title": {
+    "en_EN": "Welcome"
+  },
+  "description": {
+    "en_EN": "Opens a welcome dialogue"
+  },
+  "files": [
+    "main.js"
+  ],
+  "autostart": true
+}
