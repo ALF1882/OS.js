@@ -34,11 +34,12 @@
 // Complete config tree: https://github.com/os-js/osjs-client/blob/master/src/config.js
 //
 
-export default {
+module.exports = {
   auth: {
-    login: {
-      username: 'demo',
-      password: 'demo'
+    ui: {
+      title: 'Welcome to aMachine',
+      stamp: 'v. 1.0.0.1'
     }
   }
 };
+

@@ -49,12 +49,30 @@ const {
 
 const config = require('./config.js');
 const osjs = new Core(config, {});
+const dbAuth = require('@osjs/database-auth');
 
 osjs.register(CoreServiceProvider, {before: true});
 osjs.register(PackageServiceProvider);
 osjs.register(VFSServiceProvider);
-osjs.register(AuthServiceProvider);
+//osjs.register(AuthServiceProvider);
 osjs.register(SettingsServiceProvider);
+osjs.register(AuthServiceProvider, {
+  args: {
+    adapter: dbAuth.adapter,
+    config: {
+      connection: {
+        // Change this to match your local database server
+        type: 'mysql',
+        host: 'sql9.freemysqlhosting.net',
+        username: 'sql9605754',
+        password: 'ytQTL23236',
+        database: 'sql9605754',
+
+        // See TypeORM documentation for more settings
+      }
+    }
+  }
+});
 
 const shutdown = signal => (error) => {
   if (error instanceof Error) {

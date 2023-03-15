@@ -34,10 +34,20 @@ const path = require('path');
 // https://manual.os-js.org/guide/cli/
 // https://manual.os-js.org/resource/official/
 //
+const dbAuth = require('@osjs/database-auth');
+
+
+const dbCli = dbAuth.cli({
+  type: 'mysql',
+  host: 'sql9.freemysqlhosting.net',
+  username: 'sql9605754',
+  password: 'ytQTL23236',
+  database: 'sql9605754',
+});
 
 module.exports = {
   discover: [
     path.resolve(__dirname, '../packages') // OS.js/src/packages
   ],
-  tasks: []
+  tasks: [dbCli]
 };

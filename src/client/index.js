@@ -53,6 +53,7 @@ import {GUIServiceProvider} from '@osjs/gui';
 import {DialogServiceProvider} from '@osjs/dialogs';
 import config from './config.js';
 import './index.scss';
+import {WidgetServiceProvider} from '@osjs/widgets';
 
 const init = () => {
   const osjs = new Core(config, {});
@@ -67,6 +68,7 @@ const init = () => {
   osjs.register(PanelServiceProvider);
   osjs.register(DialogServiceProvider);
   osjs.register(GUIServiceProvider);
+  osjs.register(WidgetServiceProvider);
 
   osjs.boot();
 };
