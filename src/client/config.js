@@ -33,12 +33,11 @@
 // Guide: https://manual.os-js.org/config/#client
 // Complete config tree: https://github.com/os-js/osjs-client/blob/master/src/config.js
 //
-
 module.exports = {
   auth: {
     ui: {
       title: 'Welcome to aMachine',
-      stamp: 'v. 1.0.0.1'
+      stamp: 'v. 1.0.0.1',
     }
   }
 };
